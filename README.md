@@ -7,6 +7,7 @@ Created by: Ahmad alfisal
 Student ID: 201289481
 ________________________________________
 Program description:
+
 The program is a group of 25 drunk people and when they leave the bar they smell randomly, as happens in real life when a person loses his mind because of excessive drinking. During this period, they move around until every person reaches their house and takes a break and perhaps to complete their celebration on the second day.
 
  The model includes several files to be run as required which is it:
