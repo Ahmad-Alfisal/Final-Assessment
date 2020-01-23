@@ -16,7 +16,8 @@ Created on Fri Dec 20 17:31:45 2019
 """                                              1- to call the packeges form python library                                             """
 import matplotlib.pyplot                        # for graphics 
 from agentframework import Agent                # for call agentframework file 
-from matplotlib.animation import FuncAnimation  # to ne able to create an animation graphics by import it 
+from matplotlib.animation import FuncAnimation  # to be able to create an animation graphics by import it 
+from timeit import default_timer as t           # to be able to time the cod this source provied from  https://stackoverflow.com/questions/7370801/measure-time-elapsed-in-python
 
 
 """                                              2- Creat lists  for every variable we need to bulit the project                                             """
@@ -26,7 +27,9 @@ houses = {num:[]for num in range(10,260,10)} # this dictonary which have key for
 in_home_agents= []                           # evey agent reach his house will be add in this list. 
 fig = matplotlib.pyplot.figure()
 carry_on = True
-
+start = t()
+end = t()
+print(end - start)
 
 """                                              3- Locate the Pub and Houses, and that can be work if we bulit the list and defind  the value 1 is the
                                                     pub by writing the next function and the values btween 10 to 260 mark it as house for rvery value                                              """
