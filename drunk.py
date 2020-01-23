@@ -22,7 +22,7 @@ from matplotlib.animation import FuncAnimation  # to ne able to create an animat
 """                                              2- Creat lists  for every variable we need to bulit the project                                             """
 agents = []                                  # this list is represent the Drunkers. 
 enviroment = []                              # thislist represent the map. 
-houses = {num:[]for num in range(10,260,10)} # this dictonary which have key for every house and that represent the drunkers houses ever, and  drunker have a spesific house in the map.
+houses = {num:[]for num in range(10,260,10)} # this dictonary which have key for every house and that represent the drunks houses ever, and  drunker have a spesific house in the map.
 in_home_agents= []                           # evey agent reach his house will be add in this list. 
 fig = matplotlib.pyplot.figure()
 carry_on = True
@@ -39,7 +39,7 @@ with open ("drunk.plan") as file:  # to open this file we do the next :
         if 1 in row:               # if the value in the row is the number 1 : 
             pub = (y,row.index(1)) # that mean every value in raster file have number 1 is pub.
     
-################################################## Locate the agents(drunkers) Houses ##################################################
+################################################## Locate the agents(drunks) Houses ##################################################
     for y, row in enumerate(enviroment):    # the same explanation in the line 36 in this screen
         for x , value in enumerate(row):    # the 'x' represent the columns in the raster file and  the function of 'enumerate'  to give number for every columns and the general mening for this line is for every column in the columns:
             if value in houses:             # 
@@ -64,7 +64,7 @@ def update(f):      # to defined the movement fumction
             enviroment[agent.y][agent.x]+=1   # give the area one exstra value 
         agent.move()                          # function move 
         
-        if agent.in_home():              # to give a condition if the agent (drunker) at home 
+        if agent.in_home():              # to give a condition if the agent (drunkr) at home 
             in_home_agents.append(agent) # add the agent the  in_home_agents list
             agents.remove(agent)         # remove the agent from the old list which is it agents 
             
@@ -76,7 +76,7 @@ def update(f):      # to defined the movement fumction
         matplotlib.pyplot.scatter(agent.x, agent.y,color = "yellow") # to drow the points that represent the ahemts colored them in yellow. 
     matplotlib.pyplot.imshow(enviroment)                             # drow the map  
     
-    if len (agents) ==0:  # this function mean if all agents (drunkers) arrive to there houses:
+    if len (agents) ==0:  # this function mean if all agents (drunks) arrive to there houses:
         carry_on = False  # give the continutiy command to stop 
      
 """                                        6-Continuity function                                                                      """  
