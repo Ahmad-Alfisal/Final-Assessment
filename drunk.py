@@ -17,7 +17,7 @@ Created on Fri Dec 20 17:31:45 2019
 import matplotlib.pyplot                        # for graphics 
 from agentframework import Agent                # for call agentframework file 
 from matplotlib.animation import FuncAnimation  # to be able to create an animation graphics by import it 
-from timeit import default_timer as t           # the codes from this line to line 23 from this web side:	https://stackoverflow.com/questions/7370801/measure-time-elapsed-in-python :
+from timeit import default_timer as t           # the codes from this line to line 23 from this website:	https://stackoverflow.com/questions/7370801/measure-time-elapsed-in-python :
 start = t()                                     # this code have been used to timed the cods 
 end = t()
 print(end - start)
